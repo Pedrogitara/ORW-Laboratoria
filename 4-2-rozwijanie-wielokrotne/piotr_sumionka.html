@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pl" lang="pl">
+  <head>
+    <title>Ajax. Rozwijanie wielokrotne.</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <style type="text/css">
+    .tresc {
+        width: 325px;				/* wysokość 325 pikseli */
+        border: 3px solid blue;		/* obramowanie 3 piksele ciągła niebieska linia */
+        padding: 15px;				/* dopełnienie 15 pikseli */
+        background: #241135;        /* fioletowe tło */
+        margin: 20px;				/* margines 20 pikseli */
+		color: #ffffff;				/* kolor biały */
+    }
+    .minitresc {
+        display: none;
+        padding: 5px;
+    }
+    a {
+        width: 20px;
+        font-family: "Courier New", monospace;
+        text-decoration: none;
+    }
+    </style>
+    
+<script type="text/javascript">
+
+function expandCollapse(Id)
+{
+    var n = Id.parentNode.childNodes[2];
+    if (n.style.display == 'block') {
+        n.style.display = 'none';        
+        Id.innerHTML = '+';
+    } else {
+        n.style.display = 'block';                
+        n.innerHTML = 'Piotr Sumionka - 125NCI D.';
+        Id.innerHTML = '-';        
+    }
+}
+
+</script>    
+    
+    
+  </head>
+<body>
+
+<div class="tresc"><a href="#" onclick="expandCollapse(this);">+</a><span>Przygotował:</span><div></div></div>
+<div class="tresc"><a href="#" onclick="expandCollapse(this);">+</a><span>Przygotował:</span><div></div></div>
+<div class="tresc"><a href="#" onclick="expandCollapse(this);">+</a><span>Przygotował:</span><div></div></div>
+<div class="tresc"><a href="#" onclick="expandCollapse(this);">+</a><span>Przygotował:</span><div></div></div>
+<div class="tresc"><a href="#" onclick="expandCollapse(this);">+</a><span>Przygotował:</span><div></div></div>
+
+</body>
+</html>

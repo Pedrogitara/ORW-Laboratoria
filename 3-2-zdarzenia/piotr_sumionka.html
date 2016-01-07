@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pl" lang="pl">
+  <head>
+    <title>Ajax. Wywoływanie zdarzeń myszki.</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style type="text/css">
+    li {
+        padding: 10px;
+        border: 2px dotted yellow;
+        width: 600px;
+        margin: 25px;
+    }
+    </style>
+    
+
+<script type="text/javascript">
+
+function onclickHandler()
+{
+    var el;
+    el = document.getElementById('tresc');
+    el.innerHTML = 'Kliknięcie myszką...';
+    el.style.border = '4px doble red';
+    el.style.background = '#ff4455';
+}    
+
+function onmouseoverHandler()
+{
+    var el;
+    el = document.getElementById('tresc');
+    el.innerHTML = 'Wejście w strefę obiektu...';
+    el.style.border = '3px dotted green';
+    el.style.background = '#33ff22';
+}    
+
+function onmouseoutHandler()
+{
+    var el;
+    el = document.getElementById('tresc');
+    el.innerHTML = 'Wyjście ze strefy obiektu...';
+    el.style.border = '2px solid blue';
+    el.style.background = '#5566ff';
+}    
+
+</script>    
+
+    
+  </head>
+<body>
+
+<ul>
+<li onclick="onclickHandler();">Zdarzenie OnClick</li>
+<li onmouseover="onmouseoverHandler();">Zdarzenie OnMouseOver</li>
+<li onmouseout="onmouseoutHandler();">Zdarzenie OnMouseOut</li>
+</ul>
+
+<div id="tresc">Piotr Sumionka - 125NCI D.</div>
+
+</body>
+</html>
+

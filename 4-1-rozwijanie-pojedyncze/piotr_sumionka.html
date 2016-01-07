@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pl" lang="pl">
+  <head>
+    <title>Ajax. Menu rozwijalne.</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <style type="text/css">
+    #tresc {
+        width: 425px;				/* wysokość na 425 pikseli */
+        border: 2px solid magenta;	/* obramowanie ciągłe 2 piksele magenta */
+        padding: 25px;				/* dopełnienie 25 pikseli */
+        background: #241135;		/* tło fioletowe */
+		color: #ffffff;				/* kolor tekstu biały */
+    }
+    #minitresc {
+        display: none;
+        padding: 15px;				/* dopełnienie 15 pikseli */
+    }
+    #ikona {
+        width: 15px;							/* wysokość 15 pikseli */
+        font-family: "Courier New", monospace;	/* krój czcionki */
+        text-decoration: none;					/* bez dekoratorów */
+    }
+    </style>
+    
+<script type="text/javascript">
+
+var expanded = false;
+
+function expandCollapse()
+{
+    if (expanded) {
+        expanded = false;
+        document.getElementById('minitresc').style.display = 'none';        
+        document.getElementById('ikona').innerHTML = '=>';
+    } else {
+        expanded = true;
+        document.getElementById('minitresc').style.display = 'block';                
+        document.getElementById('minitresc').innerHTML = 'Piotr Sumionka - 125NCI D.';
+        document.getElementById('ikona').innerHTML = '*';        
+    }
+}
+
+</script>    
+    
+    
+  </head>
+<body>
+
+<div id="tresc">
+<a id="ikona" href="#" onclick="expandCollapse();">=></a>
+Kto wykonał:
+<div id="minitresc"></div>
+</div>
+
+</body>
+</html>
